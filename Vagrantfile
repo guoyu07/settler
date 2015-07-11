@@ -14,6 +14,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ['modifyvm', :id, '--natdnshostresolver1', 'on']
   end
 
+  config.vm.provider :hyperv do |hv|
+    hv.cpus = 2
+    hv.memory = 2048
+  end
+
   config.vm.provider :vmware_fusion do |v|
     v.memory = 2048
     v.cpus = 2
