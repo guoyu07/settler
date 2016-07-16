@@ -17,6 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider :hyperv do |hv|
     hv.cpus = 2
     hv.memory = 2048
+    hv.vmname = 'homestead'
   end
 
   config.vm.provider :vmware_fusion do |v|
